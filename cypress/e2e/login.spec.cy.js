@@ -14,7 +14,7 @@ describe('OrangeHRM Tests', () => {
 
   it('Should log in successfully with valid credentials', () => {
     // Positive Test
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorsList.usernameField).type(userData.validCredentials.username)
     cy.get(selectorsList.passwordField).type(userData.validCredentials.password)
     cy.get(selectorsList.loginButton).click()
@@ -23,7 +23,7 @@ describe('OrangeHRM Tests', () => {
   })
   it('Should not log in with invalid credentials', () => {
     // Negative Test
-    cy.visit('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+    cy.visit('/auth/login')
     cy.get(selectorsList.usernameField).type(userData.invalidCredentials.username)
     cy.get(selectorsList.passwordField).type(userData.invalidCredentials.password)
     cy.get(selectorsList.loginButton).click()
