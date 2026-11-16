@@ -3,8 +3,28 @@
       "username": "Admin",
       "password": "admin123"
     },
+
+    "Myinfo": {
+      "firstName": "James",
+      "middleName": "Arthur",
+      "lastName": "Smith",
+      "employeeId": "12345",
+      "otherId": "abcde",
+      "driversaLicense": "ABC12345",
+      "licenseExpiryDate": "2025-07-07",
+      "dOB": "1991-22-05",
+      "nationality": "Brazilian",
+      "maritalStatus": "Single",
+      "messagePopUp": "Successfully Updated",
+      "bloodType": "O+",
+      "testeField": "333",
+      "comment": "The file has been added"
+
+    },
+
     "invalidCredentials": {
       "username": "admin",
       "password": "123"
     }
-  }
+  
+}
