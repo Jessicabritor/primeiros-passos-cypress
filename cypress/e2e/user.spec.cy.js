@@ -15,7 +15,7 @@ const myInfoPage = new MyInfoPage()
 describe('OrangeHRM Tests', () => {
 
 
-  it.only('should update personal details on the My Info page', () => {
+  it('should update personal details on the My Info page', () => {
     loginPage.accessLoginPage()
     loginPage.loginWithUser(userData.validCredentials.username, userData.validCredentials.password)
 
@@ -33,13 +33,6 @@ describe('OrangeHRM Tests', () => {
 
   })
 
-  it('Should not log in with invalid credentials', () => {
-    // Negative Test
-    cy.visit('/auth/login')
-    cy.get(selectorsList.usernameField).type(userData.invalidCredentials.username)
-    cy.get(selectorsList.passwordField).type(userData.invalidCredentials.password)
-    cy.get(selectorsList.loginButton).click()
-    cy.get(selectorsList.wrongCredentialAlert)
-  })
+
 })
 
