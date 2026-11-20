@@ -37,7 +37,7 @@ class MyInfoPage {
         cy.get(this.selectorsList().genericField).eq(6).type('{enter}')
      }
 
-     saveForm() {
+     saveFormPersonalDetails() {
         cy.get(this.selectorsList().saveButton).eq(0).click()
         cy.get('body').should('contain', userData.Myinfo.messagePopUp)
 
@@ -67,9 +67,9 @@ class MyInfoPage {
         cy.get(this.selectorsList().successfulPopUp).should('be.visible')
      }
 
-      saveForm() {
-        cy.get(this.selectorsList().saveButton).eq(1).click()
-        cy.get('body').should('contain', userData.Myinfo.messagePopUp)
+      saveContactDetails() {
+       cy.get(this.selectorsList().saveButton).eq(1).click()
+       cy.get(this.selectorsList().successfulPopUp).should('be.visible')
 
      }
 }
